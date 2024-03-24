@@ -1,0 +1,306 @@
+#header {
+    position: absolute;
+    height: 7.5%;
+    top: 0.2%;
+    left: 0.2%;
+    z-index: 5;
+}
+
+#header_img {
+    height: 100%;
+
+}
+
+p {
+    line-height: 1.5em;
+}
+
+button {
+    background-color: rgb(255, 183, 183);
+    display: block;
+    transition-duration: 0.3s;
+    text-align: center;
+    font-family: '华文中宋';
+}
+
+button:hover {
+    background-color: rgb(255, 137, 137);
+}
+
+button:active {
+    background-color: rgb(255, 84, 84);
+}
+
+.bottom_button {
+    position: absolute;
+    left: 8%;
+    width: 25%;
+    height: 11%;
+    margin-top: 0.4em;
+
+    font-size: calc(min(calc(2.5vw/2), 1.1vh)*5);
+}
+
+.bottom_button#button_start {
+    bottom: 22%;
+}
+
+.bottom_button#button_guide {
+    bottom: 7%;
+}
+
+#messageBox_container {
+    display: none;
+
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#messageBox_content {
+    position: absolute;
+    background-color: white;
+    border-width: 0.4em;
+    border-style: solid;
+    border-color: rgb(232, 92, 92);
+
+    width: 76%;
+    height: 76%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 2% 2%;
+    margin: auto;
+
+    overflow: auto;
+}
+
+#messageBox_close {
+    position: absolute;
+    border-radius: 100%;
+    font-size: 2em;
+    width: 1.3em;
+    height: 1.3em;
+    right: 1%;
+    top: 1%;
+
+    border: solid;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+#icon_image {
+    background-color: palevioletred;
+
+    position: absolute;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    height: 75%;
+    margin: auto 0;
+}
+
+#intro {
+    position: absolute;
+    left: 8%;
+    top: 8%;
+    height: 50%;
+    width: 40%;
+
+    overflow: auto;
+    text-align: center;
+
+    border-style: solid;
+    border-color: rgba(255, 90, 90, 80%)
+}
+
+#veil {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+}
+
+.fadein#veil {
+    animation: fade-in 0.2s;
+}
+
+.fadeout#veil {
+    animation: fade-out 0.2s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+#makerinfo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    z-index: 2;
+    margin: auto;
+
+    text-align: center;
+    font-size: 1.6vmin;
+}
+
+#person {
+    position: absolute;
+    height: 75%;
+    bottom: 0%;
+    right: 2%;
+    z-index: 2;
+}
+
+#room {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.food {
+    position: absolute;
+    z-index: 2;
+}
+
+#beef {
+    top: 74%;
+    left: 3%;
+    height: 12%;
+}
+
+#fruit {
+    top: 64%;
+    left: 20%;
+    height: 18%;
+}
+
+#noodle1 {
+    top: 63%;
+    left: 35%;
+    height: 14%;
+}
+
+#noodle2 {
+    top: 66%;
+    left: 11%;
+    height: 9%;
+}
+
+#peanut {
+    top: 77%;
+    left: 32%;
+    height: 10%;
+}
+
+#sausages {
+    top: 73%;
+    left: 44%;
+    height: 11%;
+}
+
+.organ {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+}
+
+.enzyme {
+    display: block;
+    width: 20%;
+}
+
+.info_bar {
+    position: absolute;
+    width: 20%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+
+    background-color: white;
+    border-width: 0.3em;
+    border-style: solid;
+    border-color: rgb(232, 92, 92);
+
+    overflow: auto;
+}
+
+.info {
+    padding: 5% 7%;
+    height: 85%;
+    overflow: auto;
+}
+
+.info_button {
+    position: absolute;
+    bottom: 3%;
+    width: 35%;
+    height: 6%;
+
+    font-size: calc(min(calc(3.5vw*0.2), 0.7vh) * 3.6);
+}
+
+.more {
+    left: 6%;
+}
+
+.next {
+    right: 6%;
+}
+
+.qa_container {
+    position: absolute;
+    top: 8%;
+    bottom: 5%;
+    margin: auto 4%;
+}
+
+#again {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+    height: 8%;
+    z-index: 3;
+    font-size: calc(min(1vw, 0.8vh)*4);
+}
+
+.answer:hover {
+    border: 0.2em solid rgb(255, 92, 92);
+}
