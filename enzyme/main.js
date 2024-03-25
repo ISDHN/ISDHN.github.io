@@ -3,6 +3,7 @@ veil = document.getElementById("veil");
 current = document.getElementById("start");
 messageBoxContent = document.getElementById("messageBox_content");
 messageBoxContainer = document.getElementById("messageBox_container");
+select = null
 food = null;
 
 if (/Android|webOS|iPhone|iPod|BlackBerry/.test(navigator.userAgent)) {
@@ -49,10 +50,14 @@ function guide_click() {
 }
 
 function food_click(event) {
-	food = event.target.id
-	if (food == "noodle1" || food == "noodle2")
+	select = event.target.id;
+	if (select == "noodle1" || select == "noodle2")
 		food = "noodles";
+	else
+		food = select
 	switch_scene("mouth");
+	selected_food = document.getElementsByClassName("food animate_mouth")[select];
+	selected_food.style.animationPlayState = "running";
 }
 
 function next_click() {

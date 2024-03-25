@@ -21,6 +21,7 @@ button {
     transition-duration: 0.3s;
     text-align: center;
     font-family: '华文中宋';
+    border-style: solid;
 }
 
 button:hover {
@@ -96,15 +97,12 @@ button:active {
 }
 
 #icon_image {
-    background-color: palevioletred;
 
     position: absolute;
-    right: 10%;
-    top: 0;
+    right: 5%;
+    top: 14%;
     bottom: 0;
-    width: 30%;
-    height: 75%;
-    margin: auto 0;
+    width: 42%;
 }
 
 #intro {
@@ -196,40 +194,59 @@ button:active {
     z-index: 2;
 }
 
-#beef {
+.contents#beef {
     top: 74%;
     left: 3%;
     height: 12%;
 }
 
-#fruit {
+.contents#fruit {
     top: 64%;
     left: 20%;
     height: 18%;
 }
 
-#noodle1 {
+.contents#noodle1 {
     top: 63%;
     left: 35%;
     height: 14%;
 }
 
-#noodle2 {
+.contents#noodle2 {
     top: 66%;
     left: 11%;
     height: 9%;
 }
 
-#peanut {
+.contents#peanut {
     top: 77%;
     left: 32%;
     height: 10%;
 }
 
-#sausages {
+.contents#sausages {
     top: 73%;
     left: 44%;
     height: 11%;
+}
+
+.animate_mouth {
+    height: 12%;
+    top: 50%;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-name: eat_mouth;
+    animation-duration: 0.5s;
+}
+
+@keyframes eat_mouth {
+    0% {
+        left: -20%;
+    }
+
+    100% {
+        left: 60%;
+    }
 }
 
 .organ {
@@ -238,6 +255,105 @@ button:active {
     top: 0;
     height: 100%;
     width: 80%;
+    overflow: hidden;
+}
+
+.organ_image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.enzyme_organ {
+    position: absolute;
+    width: 6vmin;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.enzyme_organ#a {
+    top: 72%;
+    left: 36%;
+}
+
+.enzyme_organ#b {
+    top: 69%;
+    left: 40%;
+}
+
+.enzyme_organ#c {
+    top: 61%;
+    left: 52%;
+}
+
+.enzyme_organ#d {
+    top: 63%;
+    left: 48%;
+}
+
+.enzyme_organ#e {
+    top: 66%;
+    left: 44%;
+}
+
+.enzyme_organ#f {
+    top: 66%;
+    left: 38%;
+}
+
+.enzyme_organ#g {
+    top: 79%;
+    left: 39%;
+}
+
+.enzyme_organ#h {
+    top: 60%;
+    left: 46%;
+}
+
+.enzyme_organ#i {
+    top: 63%;
+    left: 42%;
+}
+
+.enzyme_organ#j {
+    top: 72%;
+    left: 22%;
+}
+
+.enzyme_organ#k {
+    top: 80%;
+    left: 35%;
+}
+
+.enzyme_organ#l {
+    top: 84%;
+    left: 39%;
+}
+
+.enzyme_organ#m {
+    top: 77%;
+    left: 31%;
+}
+
+.enzyme_organ#n {
+    top: 74%;
+    left: 27%;
 }
 
 .enzyme {

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pending</title>
+    <title>工作酵素</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         </a>
     </div>
     <div class="scene" id="start">
-        <image id="icon_image" title="icon"></image>
+        <img id="icon_image" src="res/title.png" title="icon"></img>
         <div id="guide" style="display: none;">
             <p>文本待定中</p>
             <p>文本待定中</p>
@@ -67,25 +67,37 @@
     <div class="scene" id="contents" style="display: none;">
         <img id="person" src="res/person.png">
         <img id="room" src="res/room.png">
-        <img class="food" id="beef" src="res/food/beef.png" onclick="food_click(event)">
-        <img class="food" id="noodle1" src="res/food/noodle1.png" onclick="food_click(event)">
-        <img class="food" id="noodle2" src="res/food/noodle2.png" onclick="food_click(event)">
-        <img class="food" id="fruit" src="res/food/fruit.png" onclick="food_click(event)">
-        <img class="food" id="peanut" src="res/food/peanut.png" onclick="food_click(event)">
-        <img class="food" id="sausages" src="res/food/sausages.png" onclick="food_click(event)">
+        <img class="food contents" id="beef" src="res/food/beef.png" onclick="food_click(event)">
+        <img class="food contents" id="noodle1" src="res/food/noodle1.png" onclick="food_click(event)">
+        <img class="food contents" id="noodle2" src="res/food/noodle2.png" onclick="food_click(event)">
+        <img class="food contents" id="fruit" src="res/food/fruit.png" onclick="food_click(event)">
+        <img class="food contents" id="peanut" src="res/food/peanut.png" onclick="food_click(event)">
+        <img class="food contents" id="sausages" src="res/food/sausages.png" onclick="food_click(event)">
     </div>
     <div class="scene" id="mouth" style="display: none;" next="stomach">
-        <img class="organ" src="res/mouth/mouth.png">
+        <div class="organ">
+            <img class="organ_image" src="res/mouth/mouth.png">
+            <img class="enzyme_organ" id="a" src="res/enzyme.png">
+            <img class="enzyme_organ" id="b" src="res/enzyme.png">
+            <img class="enzyme_organ" id="c" src="res/enzyme.png">
+            <img class="enzyme_organ" id="d" src="res/enzyme.png">
+            <img class="enzyme_organ" id="e" src="res/enzyme.png">
+            <img class="food animate_mouth" id="beef" src="res/food/beef.png">
+            <img class="food animate_mouth" id="noodle1" src="res/food/noodle1.png">
+            <img class="food animate_mouth" id="noodle2" src="res/food/noodle2.png">
+            <img class="food animate_mouth" id="fruit" src="res/food/fruit.png">
+            <img class="food animate_mouth" id="peanut" src="res/food/peanut.png">
+            <img class="food animate_mouth" id="sausages" src="res/food/sausages.png">
+        </div>
         <div class="info_bar">
             <div class="info">
-                <p>口腔是食物消化开始的地方，是由牙齿、舌头、唾液共同完成的。牙齿的作用是切磨、咬碎食物，舌头的作用是搅拌，唾液的作用是湿润食物，消化食物中的淀粉。唾液由三对大唾液腺（下颌腺、腮腺和舌下腺）分泌的液体和口腔壁上许多小粘液腺分泌的粘液。人的唾液中99%是水，有机物主要是唾液淀粉酶、粘多糖、粘蛋白及溶菌酶等，无机物有钠、钾、钙、氯和硫氰离子等。唾液淀粉酶发挥作用的最适pH值在中性范围内，唾液中的氯和硫氰酸盐对此酶有激活作用。唾液对碳水化合物的消化作用主要来自唾液淀粉酶。唾液淀粉酶将进入口腔中的一部分淀粉催化水解为麦芽糖，细嚼慢咽有助于淀粉酶与食物充分反应。舌脂酶随着唾液在口腔里出现，却在胃里完成工作。
+                <p>口腔是食物消化开始的地方，由牙齿、舌头、唾液共同完成消化。牙齿的作用是切磨、咬碎食物，舌头的作用是搅拌，唾液的作用是湿润食物，消化食物中的淀粉。人的唾液包括唾液淀粉酶、粘多糖、粘蛋白及溶菌酶等。唾液淀粉酶将进入口腔中的一部分淀粉催化水解为麦芽糖，细嚼慢咽有助于淀粉酶与食物充分反应。舌脂酶随着唾液在口腔里出现，却在胃里完成工作。
                 </p>
-                <p>口腔中还含有溶菌酶，溶菌酶具有调节机体免疫功能、增强巨噬细胞的吞噬能力、增强机体抗感染能力的作用，能够保护口腔黏膜，缓解炎症和溃疡引起的疼痛。溶菌酶是一种蛋白质类防御因子，是动物自身的重要免疫因子，一种专门作用于微生物细胞壁的水解酶，又称细胞壁溶解酶。它由英国细菌学家Fleming于1922年首先在人的眼泪和唾液中发现。因其具有抵抗细菌等微生物的能力，被命名为溶菌酶。
+                <p>口腔中还含有溶菌酶，溶菌酶具有调节机体免疫功能、增强巨噬细胞的吞噬能力、增强机体抗感染能力的作用，能够保护口腔黏膜，缓解炎症和溃疡引起的疼痛，专门水解微生物细胞壁。它由英国细菌学家Fleming于1922年首先在人的眼泪和唾液中发现。因其具有抵抗细菌等微生物的能力，被命名为溶菌酶。
                 </p>
             </div>
             <button class="info_button more" type="button" onclick="more_click()">更多..</button>
             <button class="info_button next" type="button" onclick="next_click()">&nbsp;继续&nbsp;</button>
-
         </div>
         <div class="detailed_info" id="beef" style="display: none;">
             <p>牛肉在口腔中经过咀嚼进入下一阶段。此外，其与唾液中的舌脂酶混合后在胃中完成脂肪的消化</p>
@@ -149,7 +161,13 @@
         </div>
     </div>
     <div class="scene" id="stomach" style="display: none;" next="intestine">
-        <img class="organ" src="res/stomach/stomach.png">
+        <div class="organ">
+            <img class="organ_image" src="res/stomach/stomach.png">
+            <img class="enzyme_organ" id="f" src="res/enzyme.png">
+            <img class="enzyme_organ" id="g" src="res/enzyme.png">
+            <img class="enzyme_organ" id="h" src="res/enzyme.png">
+            <img class="enzyme_organ" id="i" src="res/enzyme.png">
+        </div>
         <div class="info_bar">
             <div class="info">
                 <p>胃，即胃脏，是人体中储存和消化食物的重要器官，在我们的日常用语中就常用胃口来形容食欲乃至对其他事物的欲望，可见其在人体器官中的重要地位。胃偏于人体左侧，大部分位于左侧肋下，小部分位于腹部上区，位置基本在人体躯干正中央，上接食管，下连小肠。胃是人体重要消化器官。进了大门之后的食物，先统一安排在胃部接待。不管是鸡鸭鱼肉还是米面蛋菜，统统过一遍胃酸来个究极腐蚀（既能杀菌，也能为进一步消化做准备）。
@@ -216,7 +234,14 @@
         </div>
     </div>
     <div class="scene" id="intestine" style="display: none;" next="qa">
-        <img class="organ" src="res/intestine/intestine.png">
+        <div class="organ">
+            <img class="organ_image" src="res/intestine/intestine.png">
+            <img class="enzyme_organ" id="j" src="res/enzyme.png">
+            <img class="enzyme_organ" id="k" src="res/enzyme.png">
+            <img class="enzyme_organ" id="l" src="res/enzyme.png">
+            <img class="enzyme_organ" id="m" src="res/enzyme.png">
+            <img class="enzyme_organ" id="n" src="res/enzyme.png">
+        </div>
         <div class="info_bar">
             <div class="info">
                 <p>肠道是人体消化大分子的最后一环。第一段小肠——十二指肠，接受来着胃的食物、来自胰腺的胰液和来自肝脏的胆汁。</p>
