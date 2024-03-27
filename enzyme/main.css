@@ -114,9 +114,15 @@ button:active {
 
     overflow: auto;
     text-align: center;
+    font-size: 28px;
+    font-family: '华文楷体';
 
     border-style: solid;
     border-color: rgba(255, 90, 90, 80%)
+}
+
+#intro_content {
+    padding: 4% 4%;
 }
 
 #veil {
