@@ -3,8 +3,8 @@ veil = document.getElementById("veil");
 current = document.getElementById("start");
 messageBoxContent = document.getElementById("messageBox_content");
 messageBoxContainer = document.getElementById("messageBox_container");
-select = null
 food = null;
+animateEndProc = null
 
 if (/Android|webOS|iPhone|iPod|BlackBerry/.test(navigator.userAgent)) {
 	alert("不支持移动设备，请使用电脑访问。");
@@ -23,7 +23,7 @@ function messageBox_hide() {
 
 function switch_scene(dest) {
 	veil.style.display = "block";
-	veil.addEventListener("animationend", (event) => {
+	animateEndProc = (event) => {
 		switch (event.animationName) {
 			case "fade-in":
 				current.style.display = "none";
@@ -33,11 +33,13 @@ function switch_scene(dest) {
 				break;
 			case "fade-out":
 				veil.style.display = "none";
+				veil.removeEventListener("animationend", animateEndProc);
 				break;
 			default:
 				break;
 		}
-	});
+	}
+	veil.addEventListener("animationend", animateEndProc);
 	veil.className = "fadein";
 }
 
@@ -61,7 +63,10 @@ function food_click(event) {
 }
 
 function next_click() {
-	switch_scene(current.getAttribute("next"));
+	next = current.getAttribute("next")
+	switch_scene(next);
+	chyme = document.getElementById("chyme_" + next);
+	chyme.style.animationPlayState = "running";
 }
 
 function more_click() {
@@ -70,6 +75,14 @@ function more_click() {
 
 function again_click() {
 	switch_scene("contents");
+	for (var ani of document.getElementsByClassName("animate")) {
+		try {
+			ani.style.animationPlayState = "paused";
+		}
+		catch (e) {
+			continue;
+		}
+	}
 }
 
 function answer_click(event) {

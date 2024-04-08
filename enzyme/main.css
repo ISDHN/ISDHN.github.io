@@ -115,7 +115,6 @@ button:active {
     overflow: auto;
     text-align: center;
     font-size: 28px;
-
     font-family: '华文楷体';
 
     border-style: solid;
@@ -237,22 +236,71 @@ button:active {
     height: 11%;
 }
 
-.animate_mouth {
-    height: 12%;
-    top: 50%;
+.animate {
     animation-play-state: paused;
     animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.animate_mouth {
+    height: 12%;
     animation-name: eat_mouth;
-    animation-duration: 0.5s;
+
+}
+
+#chyme_stomach {
+    height: 6%;
+    animation-name: eat_stomach;
+}
+
+#chyme_intestine {
+    height: 30%;
+    animation-name: eat_intestine;
 }
 
 @keyframes eat_mouth {
     0% {
         left: -20%;
+        top: 50%;
     }
 
     100% {
         left: 60%;
+        top: 50%;
+    }
+}
+
+@keyframes eat_stomach {
+    0% {
+        left: 49%;
+        top: 6%;
+    }
+
+    65% {
+        left: 56%;
+        top: 64%;
+    }
+
+    100% {
+        left: 43%;
+        top: 79%;
+    }
+}
+
+@keyframes eat_intestine {
+    0% {
+        left: -7%;
+        top: 37%;
+    }
+
+    20% {
+        left: 16%;
+        top: 37%;
+    }
+
+    100% {
+        left: 52%;
+        top: 72%;
     }
 }
 
