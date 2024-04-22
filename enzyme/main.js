@@ -6,8 +6,8 @@ messageBoxContainer = document.getElementById("messageBox_container");
 food = null;
 animateEndProc = null
 
-if (/Android|webOS|iPhone|iPod|BlackBerry/.test(navigator.userAgent)) {
-	alert("不支持移动设备，请使用电脑访问。");
+if (window.innerHeight > window.innerWidth) {
+	alert("不支持竖屏访问，请横屏访问。");
 }
 
 function messageBox_show(content) {
