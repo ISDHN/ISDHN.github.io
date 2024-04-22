@@ -114,7 +114,7 @@ button:active {
 
     overflow: auto;
     text-align: center;
-    font-size: 28px;
+    font-size: 3vmin;
     font-family: '华文楷体';
 
     border-style: solid;
@@ -173,6 +173,8 @@ button:active {
     bottom: 0%;
     z-index: 2;
     margin: auto;
+
+    font-size: 2vmin;
 
     text-align: center;
     font-size: 1.6vmin;
@@ -435,7 +437,12 @@ button:active {
 .info {
     padding: 5% 7%;
     height: 85%;
+    font-size: 2vmin;
     overflow: auto;
+}
+
+.detailed_info {
+    font-size: 2vmin;
 }
 
 .info_button {
